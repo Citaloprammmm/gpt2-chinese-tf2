@@ -91,7 +91,7 @@ def preprocess_triandata2ids(current_data , word2id, n_ctx, current_end):
             continue
         datas_res.append(dialogue_ids)
     if current_end:
-        datas_res[-1].append(word2id['EOS'])
+        datas_res[-1].append(str(word2id['EOS']))
     print("bigger than max len count is {}".format(count_beyond))
     return max_len,datas_res
 
